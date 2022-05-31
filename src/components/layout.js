@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          subtitle
         }
       }
     }
@@ -25,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} subtitle={data.site.siteMetadata?.subtitle} />
       <div
         style={{
           margin: `0 auto`,
@@ -33,7 +34,6 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <hr/>
         <main>{children}</main>
       </div>
     </>
