@@ -9,15 +9,19 @@ import * as styles from "../components/index.module.css"
 
 const links = [
   {
-    text: "Page 2",
-    url: "page-2",
+    text: "Welcome",
+    url: "/",
     badge: false,
     description:
-      "A simple example of linking to another page within a Gatsby site",
+      "Welcome page",
   },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
+  {
+    text: "Info",
+    url: "/info",
+    badge: false,
+    description:
+      "This is the info page",
+  },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -26,15 +30,15 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Welcome" />
     <div className={styles.textCenter}>
-      <h1>Welcome</h1>
-      <p className={styles.intro}>
+      <nav>
         {links.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
             {i !== links.length - 1 && <> · </>}
           </React.Fragment>
         ))}
-      </p>
+        </nav>
+      <h1>Welcome</h1>
       <StaticImage
         src="../images/city.jpg"
         loading="eager"
