@@ -74,16 +74,16 @@ const IndexPage = () => (
     <Seo title="Home" />
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/city.jpg"
         loading="eager"
-        width={64}
+        width={364}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+      Edward's Test Site
       </h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
